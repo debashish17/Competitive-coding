@@ -1,13 +1,12 @@
 import java.util.*;
 
 public class leaderArray {
-    static ArrayList<Integer> findLeader(int a[], int n) {
+    public static ArrayList<Integer> findLeader(int a[], int n) {
         ArrayList<Integer> leader = new ArrayList<>();
         int maxel = a[n - 1];
         leader.add(maxel);
         for (int i = n - 2; i >= 0; i--) {
             if (a[i] >= maxel) {
-                System.out.print(maxel);
                 leader.add(a[i]);
                 maxel = a[i];
             }
@@ -16,7 +15,7 @@ public class leaderArray {
         return leader;
     }
 
-    public static void main(String args) {
+    public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int a[] = new int[n];
