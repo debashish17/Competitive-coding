@@ -44,5 +44,6 @@ public class Bitbalance {
         }
 
         System.out.print(output.toString());
+        scanner.close();
     }
 }
